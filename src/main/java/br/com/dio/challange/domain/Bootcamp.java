@@ -2,6 +2,7 @@ package br.com.dio.challange.domain;
 
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -11,7 +12,7 @@ public class Bootcamp {
     private String description;
     private LocalDate initialDate = LocalDate.now();
     private LocalDate finalDate = initialDate.plusDays(45);
-    private Set<Dev> signedDevs = new HashSet<>();
+    private Set<Dev> signedDevs = new LinkedHashSet<>();
     private Set<Content> contentBootcamp = new HashSet<>();
 
     public String getName() {

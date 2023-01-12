@@ -15,7 +15,7 @@ public class Dev {
         bootcamp.getSignedDevs().add(this);
     }
 
-    public void progress(){
+    public void toProgress(){
         Optional<Content> content = this.signedContent.stream().findFirst();
         if(content.isPresent()){
             this.completedContent.add(content.get());

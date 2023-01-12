@@ -1,7 +1,5 @@
 import br.com.dio.challange.domain.*;
 
-import java.time.LocalDate;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -23,7 +21,7 @@ public class Main {
         Course course3 = new Course();
         course3.setTitle("Java Collections");
         course3.setDescription("How can I use Arrays, Lists, Sets? In this course you will learn from basic to advanced how to use the Collections Framework");
-        course2.setWorkload(12.0);
+        course3.setWorkload(12.0);
 
         // System.out.println(course3);
 
@@ -32,17 +30,25 @@ public class Main {
         bootcampJava.setDescription("Learn Java and become a Backend Developer");
         bootcampJava.getContentBootcamp().add(course1);
         bootcampJava.getContentBootcamp().add(course2);
-        bootcampJava.getContentBootcamp().add(course3);
+//      bootcampJava.getContentBootcamp().add(course3);
 
         Dev devGusto = new Dev();
         devGusto.setName("Augusto");
         devGusto.signInBootcamp(bootcampJava);
-        System.out.println("Content course: " + devGusto.getSignedContent());
+        System.out.println("Augusto has signed in at those courses: " + devGusto.getSignedContent());
+
+        devGusto.toProgress();
+        System.out.println("Augusto have already finished: " + devGusto.getCompletedContent());
+        System.out.println(devGusto.getName() + " XP: " + devGusto.totalXp());
+        System.out.println("---------");
 
         Dev devElyn = new Dev();
         devElyn.setName("Evelyn");
         devElyn.signInBootcamp(bootcampJava);
-        System.out.println("Content course: " + devElyn.getSignedContent());
+        System.out.println("Evelyn has signed in at those courses: " + devElyn.getSignedContent());
 
+        devElyn.toProgress();
+        System.out.println("Evelyn have already finished: " + devGusto.getCompletedContent());
+        System.out.println(devElyn.getName() + " XP: " + devElyn.totalXp());
     }
 }
