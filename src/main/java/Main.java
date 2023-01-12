@@ -28,6 +28,11 @@ public class Main {
 
         System.out.println(mentoring);
 
+        Mentoring mentoring2 = new Mentoring();
+        mentoring.setTitle("Python Mentoring");
+        mentoring.setDescription("Python mentoring description right here");
+        mentoring.setDate(LocalDate.now());
+
 
     }
 }

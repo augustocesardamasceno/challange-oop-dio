@@ -36,8 +36,8 @@ public class Mentoring {
     public String toString() {
         return "Mentoring{" +
                 "title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", date=" + date +
+                ", description ='" + description + '\'' +
+                ", date =" + date +
                 '}';
     }
 
