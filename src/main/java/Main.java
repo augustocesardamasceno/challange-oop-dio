@@ -1,6 +1,4 @@
-import br.com.dio.challange.domain.Content;
-import br.com.dio.challange.domain.Course;
-import br.com.dio.challange.domain.Mentoring;
+import br.com.dio.challange.domain.*;
 
 import java.time.LocalDate;
 
@@ -9,34 +7,42 @@ public class Main {
     public static void main(String[] args) {
 
         Course course1 = new Course();
-        course1.setTitle("Java Course");
-        course1.setDescription("Description Here");
+        course1.setTitle("Why Java?");
+        course1.setDescription("You will learn why programming with Java can take you to another level in your career");
         course1.setWorkload(8.0);
 
-        System.out.println(course1);
+//        System.out.println(course1);
 
         Course course2 = new Course();
-        course2.setTitle("Python Course");
-        course2.setDescription("Description Here");
+        course2.setTitle("How does OOP works?");
+        course2.setDescription("In this course we will show you with practical examples how this way of programming works");
         course2.setWorkload(9.0);
 
-        System.out.println(course2);
+        // System.out.println(course2);
 
-        Mentoring mentoring = new Mentoring();
-        mentoring.setTitle("Java Mentoring");
-        mentoring.setDescription("Java mentoring description right here");
-        mentoring.setDate(LocalDate.now());
+        Course course3 = new Course();
+        course3.setTitle("Java Collections");
+        course3.setDescription("How can I use Arrays, Lists, Sets? In this course you will learn from basic to advanced how to use the Collections Framework");
+        course2.setWorkload(12.0);
 
-        System.out.println(mentoring);
+        // System.out.println(course3);
 
-        Mentoring mentoring2 = new Mentoring();
-        mentoring.setTitle("Python Mentoring");
-        mentoring.setDescription("Python mentoring description right here");
-        mentoring.setDate(LocalDate.now());
+        Bootcamp bootcampJava = new Bootcamp();
+        bootcampJava.setName("Bootcamp Java Developer");
+        bootcampJava.setDescription("Learn Java and become a Backend Developer");
+        bootcampJava.getContentBootcamp().add(course1);
+        bootcampJava.getContentBootcamp().add(course2);
+        bootcampJava.getContentBootcamp().add(course3);
 
-        System.out.println(mentoring2);
+        Dev devGusto = new Dev();
+        devGusto.setName("Augusto");
+        devGusto.signInBootcamp(bootcampJava);
+        System.out.println("Content course: " + devGusto.getSignedContent());
 
-        Content content = new Course();
+        Dev devElyn = new Dev();
+        devElyn.setName("Evelyn");
+        devElyn.signInBootcamp(bootcampJava);
+        System.out.println("Content course: " + devElyn.getSignedContent());
 
     }
 }

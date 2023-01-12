@@ -73,4 +73,16 @@ public class Bootcamp {
     public int hashCode() {
         return Objects.hash(getName(), getDescription(), getInitialDate(), getFinalDate(), getSignedDevs(), getContentBootcamp());
     }
+
+    @Override
+    public String toString() {
+        return "Bootcamp{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", initialDate=" + initialDate +
+                ", finalDate=" + finalDate +
+                ", signedDevs=" + signedDevs +
+                ", contentBootcamp=" + contentBootcamp +
+                '}';
+    }
 }
