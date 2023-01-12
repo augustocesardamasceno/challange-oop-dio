@@ -1,3 +1,4 @@
+import br.com.dio.challange.domain.Content;
 import br.com.dio.challange.domain.Course;
 import br.com.dio.challange.domain.Mentoring;
 
@@ -10,14 +11,14 @@ public class Main {
         Course course1 = new Course();
         course1.setTitle("Java Course");
         course1.setDescription("Description Here");
-        course1.setWorkload("8,5h");
+        course1.setWorkload(8.0);
 
         System.out.println(course1);
 
         Course course2 = new Course();
         course2.setTitle("Python Course");
         course2.setDescription("Description Here");
-        course2.setWorkload("5h");
+        course2.setWorkload(9.0);
 
         System.out.println(course2);
 
@@ -33,6 +34,9 @@ public class Main {
         mentoring.setDescription("Python mentoring description right here");
         mentoring.setDate(LocalDate.now());
 
+        System.out.println(mentoring2);
+
+        Content content = new Course();
 
     }
 }
